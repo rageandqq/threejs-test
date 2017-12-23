@@ -1,6 +1,13 @@
-import { Scene, PerspectiveCamera, WebGLRenderer, BoxGeometry, MeshBasicMaterial, Mesh } from 'three';
+import {
+  Scene,
+  PerspectiveCamera,
+  WebGLRenderer,
+  BoxGeometry,
+  MeshBasicMaterial,
+  Mesh,
+} from 'three';
 
-const { innerWidth, innerHeight, requestAnimationFrame } = window;
+const {innerWidth, innerHeight, requestAnimationFrame} = window;
 
 const scene = new Scene();
 const camera = new PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 1000);
@@ -11,7 +18,7 @@ renderer.setSize(innerWidth, innerHeight);
 document.body.appendChild(renderer.domElement);
 
 const geometry = new BoxGeometry(1, 1, 1);
-const material = new MeshBasicMaterial({ color: 0xe1f000 });
+const material = new MeshBasicMaterial({color: 0xe1f000});
 const cube = new Mesh(geometry, material);
 scene.add(cube);
 
