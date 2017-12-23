@@ -1,15 +1,18 @@
 import {
-  Scene,
-  PerspectiveCamera,
-  WebGLRenderer,
   BoxGeometry,
-  MeshBasicMaterial,
+  Color,
   Mesh,
+  MeshBasicMaterial,
+  PerspectiveCamera,
+  Scene,
+  WebGLRenderer,
 } from 'three';
 
 const {innerWidth, innerHeight, requestAnimationFrame} = window;
 
 const scene = new Scene();
+scene.background = new Color(0xbfd1e5);
+
 const camera = new PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 1000);
 
 const renderer = new WebGLRenderer();
